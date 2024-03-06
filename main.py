@@ -15,9 +15,15 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # cv2.destroyAllWindows()
 
 # 변환된 이미지 확인
-cv2.imshow('gray_lake.jpg', gray)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# cv2.imshow('gray_lake.jpg', gray)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 # 변환된 이미지 저장
 cv2.imwrite('gray_lake.jpg', gray)
+
+# 이미지 자르기
+cropped = img[0:100, 0:100]
+
+# 자른 이미지 저장
+cv2.imwrite('cropped_lake.jpg', cropped)
