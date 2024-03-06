@@ -1,6 +1,7 @@
 # 모듈 불러오기
 import cv2
 import json
+import numpy as np
 
 # 이미지 불러오기
 img = cv2.imread('lake.jpg')
@@ -20,3 +21,19 @@ color_codes_json = json.dumps(color_codes)
 # JSON 파일로 저장
 with open('color_codes.json', 'w') as f:
     f.write(color_codes_json)
+    
+# JSON 파일 읽기
+with open('color_codes.json', 'r') as f:
+    color_codes_json = f.read()
+
+# 원본 이미지 크기 가정
+height, width = 100, 100
+new_img = np.zeros((height, width, 3), np.uint8)
+
+# 색상 코드를 사용해 이미지의 각 픽셀을 설정
+for i in range(height):
+    for j in range(width):
+        new_img[i, j] = color_codes[i * width + j]
+
+# 재구현한 이미지를 저장
+cv2.imwrite('new_img.jpg', new_img)
