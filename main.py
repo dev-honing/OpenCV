@@ -22,22 +22,22 @@ color_codes_json = json.dumps(color_codes)
 # with open('color_codes.json', 'w') as f:
 #     f.write(color_codes_json)
     
-# 이미지 크기 출력
-height, width, _ = img.shape
-print(f" 이미지 크기: {height} x {width}") # 이미지 크기: 3648 x 5472
+# # 이미지 크기 출력
+# height, width, _ = img.shape
+# print(f" 이미지 크기: {height} x {width}") # 이미지 크기: 3648 x 5472
 
-# # JSON 파일 읽기
-# with open('color_codes.json', 'r') as f:
-#     color_codes_json = f.read()
+# JSON 파일 읽기
+with open('color_codes.json', 'r') as f:
+    color_codes_json = f.read()
 
-# # 원본 이미지 크기 가정
-# height, width = 100, 100
-# new_img = np.zeros((height, width, 3), np.uint8)
+# 원본 이미지 크기로 새 이미지를 생성
+height, width = 3648, 5472
+new_img = np.zeros((height, width, 3), np.uint8)
 
-# # 색상 코드를 사용해 이미지의 각 픽셀을 설정
-# for i in range(height):
-#     for j in range(width):
-#         new_img[i, j] = color_codes[i * width + j]
+# 색상 코드를 사용해 이미지의 각 픽셀을 설정
+for i in range(height):
+    for j in range(width):
+        new_img[i, j] = color_codes[i * width + j]
 
-# # 재구현한 이미지를 저장
-# cv2.imwrite('new_img.jpg', new_img)
+# 재구현한 이미지를 저장
+cv2.imwrite('new_img2.jpg', new_img)
