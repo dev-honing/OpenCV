@@ -9,5 +9,5 @@ with open('gray_color_codes.json', 'r') as f:
     gray_color_codes = json.load(f)
     
 # 리스트 길이 확인
-print(len(color_codes))
-print(len(gray_color_codes))
+print(len(color_codes)) # 19961856
+print(len(gray_color_codes)) # 19961856
