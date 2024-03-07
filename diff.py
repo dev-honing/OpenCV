@@ -9,10 +9,12 @@ with open('color_codes_flat.json', 'r') as f:
 with open('gray_color_codes.json', 'r') as f:
     gray_color_codes = json.load(f)
 
-# 각 리스트의 길이 확인
-print(len(color_codes_flat)) # 59885568
-print(len(gray_color_codes)) # 19961856
-
-# 각 리스트의 첫 번째 요소의 타입 확인
-print(type(color_codes_flat[0])) # <class 'int'>
-print(type(gray_color_codes[0])) # <class 'int'>
+# 그래프 그리기
+plt.figure(figsize=(10, 5))
+plt.plot(color_codes_flat, label='color_codes_flat')
+plt.plot(gray_color_codes, label='gray_color_codes')
+plt.title('Color Codes')
+plt.xlabel('Pixel')
+plt.ylabel('Color Code')
+plt.legend()
+plt.show()
