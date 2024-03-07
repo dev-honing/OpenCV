@@ -18,6 +18,8 @@ matplotlib 라이브러리를 사용해 차이점을 그래프화
 
 ![Alt text](image.png)
 
+### 7. 이미 커밋한 대용량 파일을 푸시
+Git LFS 시도 실패 이후, JAVA를 설치하고, BFG Repo-Cleaner로 이전의 작업 내용 중 *.json 관련 내용을 삭제하고 강제로 푸시해서 성공
 
 ## 어려움
 ### 1. GitHub에 Push할 수 없는 문제
