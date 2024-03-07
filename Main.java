@@ -11,3 +11,4 @@ public class Main {
 // 2. javac -version으로 컴파일 테스트
 // 3. javac Main.java로 컴파일
 // 4. java Main 명령으로 터미널에 콘솔 출력
+// * Java 11 이상의 버전에서는 java Main.java로 실행 가능
